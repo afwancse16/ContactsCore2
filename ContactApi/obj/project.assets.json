@@ -12607,11 +12607,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\afwan\\Documents\\Visual Studio 2017\\Projects\\ContactApi\\ContactApi\\ContactApi.csproj",
+      "projectUniqueName": "S:\\afwan\\ContactApi\\ContactsCore2\\ContactApi\\ContactApi.csproj",
       "projectName": "ContactApi",
-      "projectPath": "C:\\Users\\afwan\\Documents\\Visual Studio 2017\\Projects\\ContactApi\\ContactApi\\ContactApi.csproj",
+      "projectPath": "S:\\afwan\\ContactApi\\ContactsCore2\\ContactApi\\ContactApi.csproj",
       "packagesPath": "C:\\Users\\afwan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\afwan\\Documents\\Visual Studio 2017\\Projects\\ContactApi\\ContactApi\\obj\\",
+      "outputPath": "S:\\afwan\\ContactApi\\ContactsCore2\\ContactApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -25,6 +25,30 @@ namespace ContactApi.Controllers
         {
             var result = await ContactsRepo.GetAllAsync(skip, take);
 
+            var pagingres = PagingResult<ContactDto>.Create(_iMapper.Map<IEnumerable<ContactDto>>(result), await ContactsRepo.CountRecordsAsync());
+
+            return Ok(pagingres);
+        }
+
+        [HttpGet("companies/{skip}/{take}")]
+        public async Task<IActionResult> GetCompaniesAsync(int skip, int take)
+        {
+            var result = await ContactsRepo.GetCompaniesAsync(skip, take);
+
+            var pagingres = new PagingResult
+            {
+                Data = result,
+                Total = await ContactsRepo.CountRecordsAsync()
+            };
+
+            return Ok(pagingres);
+        }
+
+        [HttpGet("designations/{skip}/{take}")]
+        public async Task<IActionResult> GetJTAsync(int skip, int take)
+        {
+            var result = await ContactsRepo.GetJTAsync(skip, take);
+
             var pagingres = new PagingResult
             {
                 Data = _iMapper.Map<IEnumerable<ContactDto>>(result),

@@ -34,6 +34,11 @@ namespace ContactApi.Repository
             return await (ctx.Contacts.Include(i => i.Company).Include(i => i.JobTitle).OrderBy(i => i.Name).Skip(skip).Take(take)).ToListAsync();
         }
 
+        public async Task<IEnumerable<Company>> GetCompaniesAsync(int skip, int take)
+        {
+            return await (ctx.Companies.OrderBy(i => i.Name).Skip(skip).Take(take)).ToListAsync();
+        }
+
         public async Task<int> CountRecordsAsync()
         {
             return await (ctx.Contacts).CountAsync();
